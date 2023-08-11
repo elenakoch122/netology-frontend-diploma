@@ -1,0 +1,125 @@
+.train-selector {
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #928F94;
+    margin-bottom: 250px;
+}
+
+.train-selector__count {
+    float: right;
+}
+
+.train-selector__selected {
+    color: #292929;
+}
+
+.train-selector__sort {
+    margin-right: 50px;
+    color: #292929;
+}
+
+.train-selector__cards {
+    list-style: none;
+    padding-left: 0;
+}
+
+.train-selector__pages {
+    list-style: none;
+    padding-left: 0;
+    height: 0;
+    float: right;
+
+}
+
+.train-selector__pages li {
+    display: inline;
+    margin-left: 35px;
+    padding: 16px 28px 16px 28px;
+    border: 2px solid #C4C4C4;
+    width: 84px;
+    height: 84px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.train-selector__pages li:hover {
+    color: #FFA800;
+    border-color: #FFA800;
+    background: #FFFFFF;
+}
+
+.train-selector__page-selected {
+    background: #FFA800;
+    color: #FFFFFF;
+}
+
+.train-list_header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 47px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #928f94;
+}
+
+.trains_totalCount {
+    margin-right: auto;
+}
+
+.train-list_sort,
+.train-list_view,
+.train-list_view-list {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    padding-left: 2px;
+}
+
+.train-list_sort-list {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    width: 160px;
+    color: #292929;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.train-list_view-item {
+    margin-left: 10px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.train-list_view-item--active {
+    color: #000000;
+}
+
+.train-list_sort-list {
+    margin-left: 5px;
+    border: 0;
+    background: transparent;
+}
+
+.order-options {
+    width: 960px;
+}
+
+.train-list_sort-title,
+.train-list-title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #928f94;
+}
+
+.train-list_sort-item {
+    cursor: pointer;
+}

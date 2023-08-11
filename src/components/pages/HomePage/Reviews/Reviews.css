@@ -1,0 +1,78 @@
+#reviews {
+  padding: 150px 250px 122px;
+}
+
+.reviews {
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto 134px;
+}
+
+.reviews__title {
+    margin-bottom: 75px;
+    text-transform: uppercase;
+    font-family: "Roboto Medium";
+    font-size: 36px;
+    line-height: 42px;
+    color: #292929;
+}
+
+.reviews__selector {
+    position: relative;
+    bottom: 120px;
+    margin-left: 50%;
+}
+
+.reviews__selector-img {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.review__image {
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    margin-right: 35px;
+}
+
+.review__name {
+    margin-bottom: 25px;
+    font-family: "Roboto Bold";
+    font-size: 24px;
+    line-height: 28px;
+    color: #000;
+}
+
+.review__text {
+    width: 400px;
+    font-family: "Roboto Italic";
+    font-size: 18px;
+    line-height: 28px;
+    color: #928F94;
+}
+
+.carousel .control-dots .dot.dot {
+  width: 19px;
+  height: 19px;
+  margin-inline: 5px;
+  background: #E5E5E5;
+  opacity: 1;
+  box-shadow: none;
+}
+
+.carousel .control-dots .dot.dot.selected {
+  background: #C4C4C4
+}
+
+.carousel .slide {
+  text-align: start;
+}

@@ -1,0 +1,64 @@
+.side-bar {
+    display: inline-block;
+    width: 360px;
+    background: #3E3C41;
+    margin-bottom: 94px;
+}
+
+.side-bar__dates {
+    padding-top: 43px;
+    padding-left: 30px;
+}
+
+.side-bar__text {
+    margin-left: 10px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+.side-bar__date-input {
+    width: 295px;
+    height: 43px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background: #FFFFFF url('../../images/icons/date.png') no-repeat right 10px center;
+}
+
+.side-bar__date-input::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 20px;
+    color: #E5E5E5;
+}
+
+.side-bar__line {
+    width: 360px;
+    height: 2px;
+    border-bottom: 1px solid white;
+    position: absolute;
+}
+
+.side-bar__ticket-options {
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.side-bar__block {
+    margin-left: 32px;
+    padding-top: 27px;
+    margin-bottom: 34px;
+}
+
+.side-bar__block-title {
+    display: inline-block;
+    width: 220px;
+    margin-left: 12px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+}

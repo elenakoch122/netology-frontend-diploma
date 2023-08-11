@@ -1,0 +1,71 @@
+.passengers {
+    width: 80%;
+    margin-left: 90px;
+    position: relative;
+}
+
+.passengers_button {
+    margin-left: auto;
+    margin-top: 100px;
+    height: 60px;
+    padding: 0 70px 0 70px;
+
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background: #ffa800;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    right: 0;
+}
+
+.passengers_button:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.passengers_button:active {
+    color: #ffa800;
+    border: 1px solid #ffa800;
+    background-color: #e5e5e5;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.passengers_buttons {
+    height: 183px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 140px;
+}
+
+.passengers_button {
+    height: 60px;
+    padding: 0 70px 0 70px;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #ffa800;
+    border-radius: 5px;
+    border: none;
+}
+
+.passengers_button:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.passengers_button:active {
+    color: #ffa800;
+    border: 1px solid #ffa800;
+    background-color: #e5e5e5;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.passengers_button:disabled {
+    background: #928f94;
+    color: #ffffff;
+}

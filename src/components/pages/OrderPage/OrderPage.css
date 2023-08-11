@@ -1,0 +1,13 @@
+.order-page {
+    min-width: 1700px;
+}
+
+.order-page__content {
+    display: flex;
+    padding-top: 95px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    gap: 25px;
+}

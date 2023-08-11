@@ -1,0 +1,112 @@
+.order-search-form-wrapper {
+  position: relative;
+  padding-top: 111px;
+}
+
+.order-search-form-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.order-search-form {
+    position: relative;
+    min-width: 1500px;
+    max-width: 50%;
+    background: rgba(41, 41, 41, 0.7);
+    margin: 0 auto;
+    padding: 28px 44px 74px;
+}
+
+.order-search-form__text {
+    margin-left: 10px;
+    margin-top: 60px;
+    margin-bottom: 8px;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+.order-search-form__inputs {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 25px; */
+    /* margin-top: 30px; */
+}
+
+.order-search-form__date-inputs {
+    margin-top: 10px;
+}
+
+.order-search-form__arrows-wrapper {
+    vertical-align: middle;
+}
+
+.order-search-form__arrows {
+    margin: 5px;
+}
+
+.order-search-form__direction-input {
+    width: 325px;
+    height: 60px;
+    border-radius: 5px;
+    background: #FFFFFF url('../../../../images/icons/geo.png') no-repeat right 10px center;
+}
+
+.order-search-form__direction-input::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 20px;
+    color: #E5E5E5;
+}
+
+.order-search-form__date-input {
+    width: 325px;
+    height: 60px;
+    border-radius: 5px;
+    background: #FFFFFF url('../../../../images/icons/date.png') no-repeat right 10px center;
+}
+
+.order-search-form__date-input::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 20px;
+    color: #E5E5E5;
+}
+
+.order-search-form__button-wrapper {
+  text-align: end;
+}
+
+.order-search-form__button {
+    margin-top: 47px;
+    padding: 16px 66px;
+    font-family: "Roboto Bold";
+    font-size: 24px;
+    background: #FFA800;
+    border: 1px solid #FFA800;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.order-search-form__button:hover {
+    background-color: #292929cc;
+    border-color: #FFA800;
+    color: #FFA800;
+}
+
+.order-search-form__button:active {
+    border: 1px solid #ffa800;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: transparent;
+    color: #ffa800;
+}

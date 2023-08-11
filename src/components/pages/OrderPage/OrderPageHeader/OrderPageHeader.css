@@ -1,0 +1,25 @@
+.order-page-header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../../../../images/backgrounds/order_background.png');
+    vertical-align: middle;
+    min-width: 1700px;
+}
+
+.order-header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-title {
+    margin-left: 14%;
+    padding-top: 400px;
+    font-weight: 100;
+    font-size: 72px;
+    line-height: 84px;
+    color: #FFFFFF;
+}
+
+.header-title__first-part {
+    font-weight: lighter;
+}

@@ -1,0 +1,20 @@
+.success-page {
+    min-width: 1700px;
+}
+
+.success-page-header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../../../images/backgrounds/success_background.png');
+    vertical-align: middle;
+    height: 834px;
+}
+
+.success-page-title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 84px;
+    color: #FFFFFF;
+    margin-left: calc(50% - 702px);
+    margin-top: 350px;
+}
