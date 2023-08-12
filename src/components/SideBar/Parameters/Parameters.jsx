@@ -6,15 +6,13 @@ import PriceFilter from './PriceFilter';
 import TimeFilter from './TimeFilter';
 import './Parameters.css';
 
-function Parameters() {
-    return (
-        <aside className="parameters">
-            <DateFilter/>
-            <OptionsFilter/>
-            <PriceFilter/>
-            <TimeFilter/>
-        </aside>
-    );
+export default function Parameters() {
+  return (
+    <div className="parameters">
+      <DateFilter/>
+      <OptionsFilter/>
+      <PriceFilter/>
+      <TimeFilter/>
+    </div>
+  );
 }
-
-export default Parameters;

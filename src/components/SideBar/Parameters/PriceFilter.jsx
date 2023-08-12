@@ -5,7 +5,7 @@ import 'react-input-range/lib/css/index.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterChange } from '../../../slices/filterSlice';
 
-function PriceFilter() {
+export default function PriceFilter() {
    const dispatch = useDispatch();
    const { price_from, price_to } = useSelector((state) => state.filter);
 
@@ -20,8 +20,8 @@ function PriceFilter() {
             Стоимость
          </h4>
          <div className="price-filter__label-wrapper">
-            <p className="price-filter__label">от</p>
-            <p className="price-filter__label">до</p>
+            <span className="price-filter__label">от</span>
+            <span className="price-filter__label">до</span>
          </div>
          <InputRange
             id="slider"
@@ -37,5 +37,3 @@ function PriceFilter() {
       </div>
    );
 }
-
-export default PriceFilter;

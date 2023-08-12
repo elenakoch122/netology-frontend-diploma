@@ -5,11 +5,11 @@ const initialState = {
     date_start: null,
     date_end: null,
     routeFrom: {
-        id: '63329d7b591d1e00467e8a30',
+        id: '641037eb5c49ea004632ee6e',
         city: 'москва',
     },
     routeIn: {
-        id: '63329d7b591d1e00467e8a31',
+        id: '641037eb5c49ea004632ee6f',
         city: 'санкт-петербург',
     },
 };

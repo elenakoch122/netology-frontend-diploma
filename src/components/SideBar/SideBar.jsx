@@ -6,24 +6,15 @@ import Parameters from './Parameters/Parameters';
 import Details from './Details/Details';
 import LastTickets from "../pages/OrderPage/LastTickets/LastTickets";
 
-function SideBar() {
-    const {stage} = useSelector((state) => state.stage);
-    return (
-        <div>
-            <div className="side-bar">
-                {stage === 1 ? (
-                    <div>
-                        <Parameters/>
-                    </div>
-                ) : (
-                    <div>
-                        <Details/>
-                    </div>
-                )}
-            </div>
-            {stage === 1 && <LastTickets/>}
-        </div>
-    );
-}
+export default function SideBar() {
+  const {stage} = useSelector((state) => state.stage);
 
-export default SideBar;
+  return (
+    <div>
+      <aside className="side-bar">
+        {stage === 1 ? (<div><Parameters/></div>) : (<div><Details/></div>)}
+      </aside>
+      {stage === 1 && <LastTickets/>}
+    </div>
+  );
+}
