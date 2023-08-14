@@ -30,6 +30,7 @@
     box-sizing: border-box;
     border-radius: 5px;
     background-color: #ffffff;
+    cursor: pointer;
 }
 
 .ticket_header-button:hover {
@@ -93,6 +94,7 @@
 }
 
 .seats .train_routes {
+    align-self: center;
     width: auto;
     padding: 28px 36px 26px 36px;
     position: relative;
@@ -126,6 +128,9 @@
 .seats .train__info-duration {
     margin-left: 10px;
     width: 100px;
+    font-family: "Roboto Regular";
+    font-size: 18px;
+    color: #000;
 }
 
 .seats .train_time {
@@ -160,6 +165,10 @@
     border: 1px dashed #c4c4c4;
 }
 
+.ticket_count-title {
+  margin-bottom: 15px;
+}
+
 .ticket_count-wrapper {
     display: flex;
 }
@@ -167,6 +176,15 @@
 .ticket_count-card {
     width: 33.33%;
     padding: 20px 35px 0 35px;
+}
+
+.ticket_count-card:hover {
+  outline: 1px solid #FFA800;
+}
+
+.ticket_count-card:has(.ticket_count-list:focus) {
+  background-color: #F7F6F6;
+  outline: none;
 }
 
 .ticket_count-list {
@@ -181,26 +199,35 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    cursor: pointer;
+}
+
+.ticket_count-list option {
+  color: #292929;
 }
 
 .ticket_count-text {
     margin-top: 23px;
     margin-bottom: 20px;
+    font-family: "Roboto Regular";
     font-size: 16px;
     line-height: 19px;
-}
-
-.count-child {
-    color: #928f94;
+    color: #928F94;
 }
 
 .ticket_count-list::-ms-expand {
     display: none;
 }
 
+.ticket_class-title {
+  margin-bottom: 25px;
+}
+
 .ticket_class-list {
     list-style-type: none;
     display: flex;
+    margin-left: 30px;
+    margin-bottom: 30px;
 }
 
 .ticket_class-item {
@@ -216,6 +243,7 @@
 .ticket_class-button {
     border: 0;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .ticket__class-icon {
@@ -250,7 +278,8 @@
     display: flex;
     align-items: center;
     list-style-type: none;
-    margin: 0;
+    margin-left: 30px;
+    /* margin: 0; */
     font-weight: 400;
     font-size: 18px;
     color: #2d2b2f;
@@ -270,7 +299,7 @@
 }
 
 .ticket_coach-numbering {
-    font-weight: 400;
+    font-family: "Roboto Regular";
     font-size: 16px;
     line-height: 19px;
     color: #292929;

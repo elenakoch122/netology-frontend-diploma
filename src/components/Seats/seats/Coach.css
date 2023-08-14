@@ -1,8 +1,7 @@
-.coach {
-}
 .coach-info {
-   display: flex;
+  display: flex;
 }
+
 .coach-info-header {
    box-sizing: border-box;
    width: 190px;
@@ -13,6 +12,7 @@
    justify-content: center;
    padding-left: 30px;
 }
+
 .coach-number {
    font-style: normal;
    font-weight: 700;
@@ -22,11 +22,13 @@
    margin: 0;
    color: #292929;
 }
+
 .coach-title {
    font-weight: 400;
    font-size: 24px;
    line-height: 28px;
    margin: 0;
+   color: #292929;
 }
 .coach-info-card {
    font-weight: 400;
@@ -53,7 +55,8 @@
    font-size: 18px;
    line-height: 21px;
    color: #928f94;
-   margin-bottom: 0;
+   margin-top: 33px;
+   margin-bottom: 21px;
 }
 
 .coach-ticket-сurrency {
@@ -63,8 +66,28 @@
 .coach-info-count {
    color: #000000;
 }
+
+.coach-info-text {
+  margin-bottom: 24px;
+  font-family: "Roboto Regular";
+  font-size: 24px;
+  color: #000;
+}
+
 .coach-info-text:last-child {
    margin-bottom: 0;
+}
+
+.coach-info-text strong {
+  font-family: "Roboto Bold";
+  font-size: 24px;
+  color: #000;
+}
+
+.coach-info-text .currency-item {
+  font-family: "Roboto Bold";
+  font-size: 24px;
+  color: #000;
 }
 
 .coach-services {
@@ -198,6 +221,14 @@
    background-color: #f2f2f2;
 }
 
+.coach-seat:hover {
+  background-color: #ffa800;
+}
+
+.coach-seat-number {
+  color: #000;
+}
+
 .coach-seat--active {
    border: 2px solid #ffa800;
 }
@@ -251,3 +282,5 @@
 .coach-total-сurrency {
    height: 17px;
 }
+
+.coach-seat-number {}

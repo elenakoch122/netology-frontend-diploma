@@ -14,13 +14,9 @@ function LastTickets() {
             });
     }, []);
 
-    const onClick = () => {
-
-    };
-
     if (items.length === 0) return '';
     return (
-        <section className="last" onClick={onClick}>
+        <section className="last">
             <h3 className="last_title">Последние билеты</h3>
             <div className="last_list">
                 {items.map((item) => (

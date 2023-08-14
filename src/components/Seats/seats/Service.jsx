@@ -15,6 +15,13 @@ export default function Service({ service, type, id, disabled }) {
       }
    };
 
+   const serviceTypesTitle = {
+    wifi: 'Wi-Fi',
+    linens: 'Постельное бельё',
+    food: 'Питание',
+    air: 'Кондиционер',
+   };
+
    return (
        <button
            type="button"
@@ -25,6 +32,7 @@ export default function Service({ service, type, id, disabled }) {
            }`}
            onClick={handleClick}
            disabled={disabled}
+       title={serviceTypesTitle[`${service}`]}
        />
    );
 }

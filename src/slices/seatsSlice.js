@@ -90,6 +90,8 @@ const seatsSlice = createSlice({
             localStorage.setItem(`seats-${type}`, JSON.stringify(state[type]));
         },
         seatsItemSelect: (state, action) => {
+          // eslint-disable-next-line no-debugger
+          debugger;
             const {id, number, type} = action.payload;
             state[type].seats[id].push(number);
             state[type].seatsCount += 1;

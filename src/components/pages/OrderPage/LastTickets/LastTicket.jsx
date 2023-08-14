@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router';
 import PropTypes from 'prop-types';
 
 import PriceFormat from '../../../PriceFormat/PriceFormat';
@@ -7,10 +9,19 @@ import express from '../../../../images/tickets/tickets-express.svg';
 import wifi from '../../../../images/tickets/tickets-wifi.svg';
 import conditioning from '../../../../images/tickets/tickets-conditioning.svg';
 import food from '../../../../images/tickets/tickets-food.svg';
+import { trainAdd } from '../../../../slices/seatsSlice';
 
 function LastTicket({ticket}) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const onClick = () => {
+    dispatch(trainAdd({train: ticket}));
+    navigate('/order/tickets/seats');
+  };
+
     return (
-        <div className="last_ticket">
+        <div className="last_ticket" onClick={onClick}>
             <div className="last_ticket-header">
                 <div className="last_ticket-title-from">
                     <h4 className="last_ticket-title">

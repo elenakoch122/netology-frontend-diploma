@@ -153,10 +153,10 @@
 }
 
 .route_city {
-    font-weight: 400;
+    font-family: "Roboto Regular";
     font-size: 18px;
     line-height: 21px;
-    color: #ffffff;
+    color: #292929;
     margin: 0;
     text-transform: capitalize;
 }

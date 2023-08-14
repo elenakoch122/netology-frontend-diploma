@@ -6,6 +6,7 @@
     min-width: 959px;
     min-height: 268px;
     margin-bottom: 50px;
+    cursor: default;
 }
 
 .order_train:nth-child(n + 2) {
@@ -45,6 +46,7 @@
 .train_title-route {
     font-size: 16px;
     line-height: 19px;
+    color: #000;
     text-transform: capitalize;
     margin: 0;
 }
@@ -174,6 +176,7 @@
     line-height: 28px;
     text-align: center;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .train_seats-button:hover {

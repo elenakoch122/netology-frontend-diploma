@@ -69,20 +69,23 @@
 
 .trains_totalCount {
     margin-right: auto;
+    font-family: "Roboto Regular";
+    font-size: 20px;
+    color: #928F94;
 }
 
 .train-list_sort,
 .train-list_view,
 .train-list_view-list {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     margin: 0;
     padding-left: 2px;
 }
 
 .train-list_sort-list {
     cursor: pointer;
-    font-weight: 400;
+    font-family: "Roboto Regular";
     font-size: 18px;
     line-height: 21px;
     width: 160px;
@@ -93,12 +96,16 @@
 
 .train-list_view-item {
     margin-left: 10px;
+    font-family: "Roboto Regular";
+    font-size: 18px;
+    color: #928F94;
     list-style-type: none;
     cursor: pointer;
 }
 
 .train-list_view-item--active {
     color: #000000;
+    cursor: default;
 }
 
 .train-list_sort-list {
@@ -114,12 +121,15 @@
 .train-list_sort-title,
 .train-list-title {
     margin: 0;
-    font-weight: 400;
+    font-family: "Roboto Regular";
     font-size: 20px;
     line-height: 25px;
     color: #928f94;
 }
 
 .train-list_sort-item {
-    cursor: pointer;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  color: #3E3C41;
+  cursor: pointer;
 }

@@ -46,8 +46,11 @@ export default function Seat({
     }
 
     const handleClick = () => {
+      // eslint-disable-next-line no-debugger
+      debugger;
         if (seats[id] && seats[id].includes(number)) {
             dispatch(seatsItemUnSelect({id, number, type: typeTicket}));
+            // return;
         } else if (seatsCount < passengersCount.adult + passengersCount.child) {
             dispatch(seatsItemSelect({id, number, type: typeTicket}));
         }

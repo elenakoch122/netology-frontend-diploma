@@ -31,6 +31,7 @@
     background: #ffa800;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
 .seats-button:hover {
