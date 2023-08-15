@@ -10,7 +10,7 @@ import { routeTo, routeBack, seat, platzcart, kupe, lux } from '../../../images/
 import './Ticket.css';
 import Train from '../../pages/OrderPage/TrainCard/TrainCard';
 import {coachClassChange, coachItemsClear, coachItemsSelect, coachItemsUnSelect} from "../../../slices/seatsSlice";
-import {passengersCountChange} from "../../../slices/passengersSlice";
+import {passengersCountChange, passengersPriceClear} from "../../../slices/passengersSlice";
 import Coach from "./Coach";
 
 export default function Ticket({type}) {
@@ -80,8 +80,9 @@ export default function Ticket({type}) {
     };
 
     const handleBack = () => {
-        dispatch(coachItemsClear({type}));
-        navigate(-1);
+      dispatch(coachItemsClear({type}));
+      dispatch(passengersPriceClear());
+      navigate(-1);
     };
 
     return (

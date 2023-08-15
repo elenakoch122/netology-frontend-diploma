@@ -4,14 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import PropTypes from 'prop-types';
 import {seatsItemSelect, seatsItemUnSelect} from "../../../slices/seatsSlice";
 
-export default function Seat({
-                                 id,
-                                 number,
-                                 type,
-                                 left,
-                                 available,
-                                 typeTicket,
-                             }) {
+export default function Seat({ id, number, type, left, available, typeTicket }) {
     const {seats, seatsCount} = useSelector(
         (state) => state.seats[typeTicket]
     );
@@ -46,12 +39,12 @@ export default function Seat({
     }
 
     const handleClick = () => {
-      // eslint-disable-next-line no-debugger
-      debugger;
         if (seats[id] && seats[id].includes(number)) {
             dispatch(seatsItemUnSelect({id, number, type: typeTicket}));
-            // return;
-        } else if (seatsCount < passengersCount.adult + passengersCount.child) {
+            return;
+        }
+
+        if (seatsCount < passengersCount.adult + passengersCount.child) {
             dispatch(seatsItemSelect({id, number, type: typeTicket}));
         }
     };

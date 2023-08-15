@@ -225,6 +225,17 @@
   background-color: #ffa800;
 }
 
+.coach-wagon-number {
+  position: absolute;
+  top: 0;
+  left: 41px;
+  width: 33px;
+  height: 25px;
+  color: #fff;
+  background-color: #292929;
+  text-align: center;
+}
+
 .coach-seat-number {
   color: #000;
 }
@@ -265,14 +276,14 @@
 
 .coach-total-text {
    margin: 0;
-   padding-top: 19px;
+   padding-top: 24px;
    text-align: end;
    padding-right: 38px;
 }
 
 .coach-total-value {
    font-weight: 700;
-   font-size: 24px;
+   font-size: 28px;
    line-height: 28px;
    padding-right: 5px;
 
@@ -280,7 +291,7 @@
 }
 
 .coach-total-сurrency {
-   height: 17px;
+   height: 20px;
 }
 
 .coach-seat-number {}

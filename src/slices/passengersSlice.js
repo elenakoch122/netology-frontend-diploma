@@ -55,6 +55,7 @@ const passengersSlice = createSlice({
                     services: 0,
                 },
             };
+            localStorage.setItem('passengersPrice', JSON.stringify(state.passengersPrice));
         },
 
         addPassengersData: (state, action) => {

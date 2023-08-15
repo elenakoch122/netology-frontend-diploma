@@ -23,6 +23,11 @@
     margin-bottom: 17px;
     padding: 23px 18px 16px 18px;
     cursor: pointer;
+    transition: .3s;
+}
+
+.last_ticket:hover {
+  border-color: #ffa800;
 }
 
 .last_ticket-header {

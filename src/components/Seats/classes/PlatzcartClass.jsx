@@ -57,23 +57,24 @@ export default function PlatzcartClass({ id, seatsList, typeTicket }) {
    ];
 
    return (
-       <div className="coach-seats-list coach-seats-list--platzcart">
-          {seats.map((el) => (
-              <Seat
-                  id={id}
-                  key={el.number}
-                  typeTicket={typeTicket}
-                  number={el.number}
-                  type={el.type}
-                  left={el.left}
-                  available={
-                     seatsList[el.number - 1]
-                         ? seatsList[el.number - 1].available
-                         : false
-                  }
-              />
-          ))}
-       </div>
+    <div className="coach-seats-list coach-seats-list--platzcart">
+      <div className='coach-wagon-number'>{id.toString().slice(-2)}</div>
+      {seats.map((el) => (
+          <Seat
+              id={id}
+              key={el.number}
+              typeTicket={typeTicket}
+              number={el.number}
+              type={el.type}
+              left={el.left}
+              available={
+                  seatsList[el.number - 1]
+                      ? seatsList[el.number - 1].available
+                      : false
+              }
+          />
+      ))}
+    </div>
    );
 }
 
