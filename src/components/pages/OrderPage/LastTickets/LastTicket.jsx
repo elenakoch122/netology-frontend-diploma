@@ -9,7 +9,8 @@ import express from '../../../../images/tickets/tickets-express.svg';
 import wifi from '../../../../images/tickets/tickets-wifi.svg';
 import conditioning from '../../../../images/tickets/tickets-conditioning.svg';
 import food from '../../../../images/tickets/tickets-food.svg';
-import { trainAdd } from '../../../../slices/seatsSlice';
+import { coachItemsClear, trainAdd } from '../../../../slices/seatsSlice';
+import { passengersPriceClear } from '../../../../slices/passengersSlice';
 
 function LastTicket({ticket}) {
   const dispatch = useDispatch();
@@ -17,6 +18,9 @@ function LastTicket({ticket}) {
 
   const onClick = () => {
     dispatch(trainAdd({train: ticket}));
+    dispatch(coachItemsClear({ type: 'arrival' }));
+    dispatch(coachItemsClear({ type: 'departure' }));
+    dispatch(passengersPriceClear());
     navigate('/order/tickets/seats');
   };
 
