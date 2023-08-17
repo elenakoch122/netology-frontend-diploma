@@ -98,6 +98,7 @@
 
 .details_info-title {
     margin: 0;
+    color: #E5E5E5;;
 }
 
 .details_info-text {
@@ -145,6 +146,7 @@
 
 .route_duration-time {
     margin: 0 0 7px 0;
+    color: #E5E5E5;
 }
 
 .route_date {
@@ -159,6 +161,10 @@
     color: #292929;
     margin: 0;
     text-transform: capitalize;
+}
+
+.details_info .route .route_info .route_city {
+  color: #fff;
 }
 
 .route_info--right {

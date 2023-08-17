@@ -35,22 +35,18 @@ export default function Coach({coach, seatsList, typeTicket}) {
 
     useEffect(() => {
         const calculatePrice = (el) => {
-            if (type.kupe || type.platzcart) {
-                if (el > 32) {
-                    return coach.side_price;
-                }
-                if (el % 2 === 0) {
-                    return coach.top_price;
-                }
-                return coach.bottom_price;
-            }
-            if (type.seat) {
-                if (el > 32) {
-                    return coach.bottom_price;
-                }
-                return coach.top_price;
-            }
+          if (type.kupe || type.platzcart) {
+            if (el > 32) return coach.side_price;
+            if (el % 2 === 0) return coach.top_price;
             return coach.bottom_price;
+          }
+
+          if (type.seat) {
+            if (el > 32) return coach.bottom_price;
+            return coach.top_price;
+          }
+
+          return coach.bottom_price;
         };
 
         if (seats[coach._id]) {
@@ -58,37 +54,33 @@ export default function Coach({coach, seatsList, typeTicket}) {
                 .slice(0, passengersCount.child)
                 .map((el) => calculatePrice(el) * 0.5)
                 .reduce((acc, el) => acc + el, 0);
+
             const adultPrice = seats[coach._id]
                 .slice(passengersCount.child)
                 .map((el) => calculatePrice(el))
                 .reduce((acc, el) => acc + el, 0);
-            if (childPrice !== passengersPrice.child) {
+
+            if (Math.floor(childPrice) !== passengersPrice.child) {
                 const previous = passengersPrice.child - child;
                 setChild(Math.floor(childPrice));
-                dispatch(
-                    passengersPriceChange({
-                        type: 'child',
-                        price: previous + Math.floor(childPrice),
-                        typeTicket,
-                    })
-                );
+                dispatch(passengersPriceChange({
+                  type: 'child',
+                  price: previous + Math.floor(childPrice),
+                  typeTicket,
+                }));
             }
-            if (adultPrice !== passengersPrice.adult) {
+
+            if (Math.floor(adultPrice) !== passengersPrice.adult) {
                 const previous = passengersPrice.adult - adult;
                 setAdult(Math.floor(adultPrice));
-                dispatch(
-                    passengersPriceChange({
-                        type: 'adult',
-                        price: previous + Math.floor(adultPrice),
-                        typeTicket,
-                    })
-                );
+                dispatch(passengersPriceChange({
+                  type: 'adult',
+                  price: previous + Math.floor(adultPrice),
+                  typeTicket,
+                }));
             }
         }
-    }, [
-        seats, adult, child, coach._id, dispatch, passengersCount.child, passengersPrice.adult, passengersPrice.child,
-        typeTicket, coach.bottom_price, coach.side_price, coach.top_price, type.kupe, type.platzcart, type.seat
-    ]);
+    }, [adult, child, coach._id, coach.bottom_price, coach.side_price, coach.top_price, dispatch, passengersCount.child, passengersPrice.adult, passengersPrice.child, seats, type.kupe, type.platzcart, type.seat, typeTicket]);
 
     useEffect(() => {
         if (services[coach._id]) {
@@ -100,7 +92,7 @@ export default function Coach({coach, seatsList, typeTicket}) {
                     return 0;
                 })
                 .reduce((acc, el) => acc + el, 0);
-            if (servicesPrice !== passengersPrice.services) {
+            if (Math.floor(servicesPrice) !== passengersPrice.services) {
                 const previous = passengersPrice.services - service;
                 setService(Math.floor(servicesPrice));
                 dispatch(
