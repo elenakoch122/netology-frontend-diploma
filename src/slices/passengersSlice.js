@@ -35,8 +35,6 @@ const passengersSlice = createSlice({
             );
         },
         passengersPriceChange: (state, action) => {
-          // eslint-disable-next-line no-debugger
-          // debugger;
             const {type, price, typeTicket} = action.payload;
             state.passengersPrice[typeTicket][type] = price;
             localStorage.setItem(

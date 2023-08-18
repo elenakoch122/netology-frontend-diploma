@@ -1,15 +1,17 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {useDispatch, useSelector} from "react-redux";
 
 import './PassengerForm.css';
+import moment from 'moment';
 import validateDocument from "./validateDocument";
 import {addPassengersData} from "../../../../slices/passengersSlice";
+
 
 function PassengerForm({number, type}) {
     const dispatch = useDispatch();
 
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState(true);
 
     const {passengers} = useSelector((state) => state.passengers);
     const passenger = passengers.find((e) => e.number === number);
@@ -31,7 +33,13 @@ function PassengerForm({number, type}) {
         series: passenger ? passenger.series : '',
         document: passenger ? passenger.document : '',
     });
-    const [message, setMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [okMessage, setOkMessage] = useState('');
+
+    const manageMessages = (text) => {
+      setErrorMessage(text);
+      setTimeout(() => setErrorMessage(''), 10 * 1000);
+    };
 
     const handleShow = () => {
         setActive((prev) => !prev);
@@ -39,20 +47,16 @@ function PassengerForm({number, type}) {
 
     const handleChange = (event) => {
         const {name, value} = event.target;
-        setForm((prev) => ({...prev, [name]: value}));
+        setForm((prev) => ({ ...prev, [name]: value }));
     };
 
     const handleRadio = (event) => {
         setForm((prev) => ({...prev, sex: event.target.dataset.id}));
     };
 
-    const manageMessages = (text) => {
-        setMessage(text);
-        setTimeout(() => setMessage(''), 10 * 1000);
-    };
-
     const onSubmit = (e) => {
         e.preventDefault();
+
         if (!(form.surname.trim() && form.name.trim() && form.lastname.trim())) {
             manageMessages('Необходимо ввести фамилию, имя и отчество пассажира');
             return;
@@ -62,7 +66,7 @@ function PassengerForm({number, type}) {
             return;
         }
         if (!form.birth) {
-            manageMessages('Укажите дату рождения в формате дд-мм-гг');
+            manageMessages('Укажите дату рождения в формате ДД.ММ.ГГГГ');
             return;
         }
         if (
@@ -79,15 +83,19 @@ function PassengerForm({number, type}) {
             (!(form.series && validateDocument('series', form.series)) ||
                 !validateDocument(documentType, form.document))
         ) {
-            manageMessages('Номер или серия паспорта введы не некорректно');
+            manageMessages('Номер или серия паспорта введены некорректно');
             return;
         }
-        setMessage('');
+        setErrorMessage('');
+        setOkMessage('Готово');
         dispatch(addPassengersData({number, data: form}));
     };
 
+    useEffect(() => console.log(okMessage), [okMessage]);
+
     return (
-        <div className="passengerForm">
+        <form className="passengerForm">
+            <div style={{ color: 'black', fontSize: '24px' }}>{errorMessage} and {okMessage}</div>
             <div className={`passenger_header ${active ? 'active-form' : ''}`}>
                 <h4 className="title title--small passenger_title">
                <span
@@ -104,7 +112,7 @@ function PassengerForm({number, type}) {
                     active ? 'passengerForm--active' : 'hidden'
                 }`}
             >
-                <form className="passengerForm-section">
+                <div className="passengerForm-section">
                     <select
                         className="passengerForm-field passengerForm-list"
                         defaultValue={type}
@@ -161,7 +169,7 @@ function PassengerForm({number, type}) {
                             />
                         </label>
                     </div>
-                </form>
+                </div>
 
                 <div className="passengerForm-controls passengerForm-section">
                     <div className="passengerForm-radio-group">
@@ -208,11 +216,12 @@ function PassengerForm({number, type}) {
                         <input
                             className="passengerForm-field"
                             id={`birth${number}`}
-                            type="text"
+                            type="date"
                             placeholder="ДД/ММ/ГГ"
                             name="birth"
                             value={form.birth}
                             onChange={handleChange}
+                            max={moment().format('YYYY-MM-DD')}
                         />
                     </label>
                 </div>
@@ -296,19 +305,27 @@ function PassengerForm({number, type}) {
                 </div>
                 <div
                     className={`passengerForm-footer passengerForm-section ${
-                        passenger ? 'done' : ''
-                    } ${message ? 'warning' : ''}`}
+                      okMessage ? 'done' : ''
+                    } ${
+                      errorMessage ? 'warning' : ''
+                    }`}
                 >
-                    {passenger && (
+                    {/* {passenger && (
                         <div className="passengerForm-massage">
                             <span className="massage-done-img"/>
                             <span className="massage-done">Готово</span>
                         </div>
+                    )} */}
+                    {okMessage && (
+                        <div className="passengerForm-massage">
+                            <span className="massage-done-img"/>
+                            <span className="massage-done">{okMessage}</span>
+                        </div>
                     )}
-                    {message ? (
+                    {errorMessage ? (
                         <div className="passengerForm-massage">
                             <span className="massage-warning-img"/>
-                            <span className="massage-warning">{message}</span>
+                            <span className="massage-warning">{errorMessage}</span>
                         </div>
                     ) : (
                         <button
@@ -321,7 +338,7 @@ function PassengerForm({number, type}) {
                     )}
                 </div>
             </div>
-        </div>
+        </form>
     );
 }
 
