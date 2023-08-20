@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {useDispatch, useSelector} from "react-redux";
 
@@ -34,7 +34,6 @@ function PassengerForm({number, type}) {
         document: passenger ? passenger.document : '',
     });
     const [errorMessage, setErrorMessage] = useState('');
-    const [okMessage, setOkMessage] = useState('');
 
     const manageMessages = (text) => {
       setErrorMessage(text);
@@ -87,15 +86,11 @@ function PassengerForm({number, type}) {
             return;
         }
         setErrorMessage('');
-        setOkMessage('Готово');
         dispatch(addPassengersData({number, data: form}));
     };
 
-    useEffect(() => console.log(okMessage), [okMessage]);
-
     return (
         <form className="passengerForm">
-            <div style={{ color: 'black', fontSize: '24px' }}>{errorMessage} and {okMessage}</div>
             <div className={`passenger_header ${active ? 'active-form' : ''}`}>
                 <h4 className="title title--small passenger_title">
                <span
@@ -289,12 +284,12 @@ function PassengerForm({number, type}) {
                                 placeholder={
                                     documentType === 'passport'
                                         ? '_ _ _ _ _ _'
-                                        : '12 символов'
+                                        : 'Пример, III-ET 545454'
                                 }
                                 maxLength={
                                     documentType === 'passport'
                                         ? "6"
-                                        : "12"
+                                        : "13"
                                 }
                                 name="document"
                                 value={form.document}
@@ -304,22 +299,16 @@ function PassengerForm({number, type}) {
                     </div>
                 </div>
                 <div
-                    className={`passengerForm-footer passengerForm-section ${
-                      okMessage ? 'done' : ''
-                    } ${
-                      errorMessage ? 'warning' : ''
+                    className={`passengerForm-footer passengerForm-section${
+                      passenger ? ' done' : ''
+                    }${
+                      errorMessage ? ' warning' : ''
                     }`}
                 >
-                    {/* {passenger && (
+                    {passenger && (
                         <div className="passengerForm-massage">
                             <span className="massage-done-img"/>
                             <span className="massage-done">Готово</span>
-                        </div>
-                    )} */}
-                    {okMessage && (
-                        <div className="passengerForm-massage">
-                            <span className="massage-done-img"/>
-                            <span className="massage-done">{okMessage}</span>
                         </div>
                     )}
                     {errorMessage ? (
