@@ -37,7 +37,7 @@ function PassengerForm({number, type}) {
 
     const manageMessages = (text) => {
       setErrorMessage(text);
-      setTimeout(() => setErrorMessage(''), 10 * 1000);
+      setTimeout(() => setErrorMessage(''), 5 * 1000);
     };
 
     const handleShow = () => {

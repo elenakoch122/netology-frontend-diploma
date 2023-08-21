@@ -40,7 +40,7 @@ function TrainCard(route, type) {
     };
 
     return (
-        <div className={`train-card order_train ${option || ''}`}>
+        <div className={`train-card order_train ${option || ''} train-card-verification`}>
             <div className="train_logo">
                 <img
                     className="train_logo-icon"

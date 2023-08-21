@@ -10,6 +10,14 @@ html {
   scroll-behavior: smooth;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
 .wrapper {
   margin: 0 12.7%;
 }

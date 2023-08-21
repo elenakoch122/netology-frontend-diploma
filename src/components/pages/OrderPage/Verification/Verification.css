@@ -1,10 +1,13 @@
-.verification {
+/* .verification {
     margin-left: 89px;
+} */
 
+.train-card-verification {
+  margin: 0;
 }
 
-.order_verification {
-}
+/* .order_verification {
+} */
 
 .verification-section {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
@@ -18,7 +21,7 @@
 }
 
 .verification-title {
-    font-weight: 400;
+    font-family: "Roboto Regular";
     font-size: 30px;
     line-height: 95px;
     margin: 0;
@@ -66,6 +69,9 @@
 
 .passenger_card-title {
     margin: 17px 0 0;
+    font-family: "Roboto Regular";
+    font-size: 18px;
+    color: #292929;
 }
 
 .passenger_card-content-title {
@@ -115,8 +121,33 @@
     margin-left: 7px;
 }
 
+.verification-content {
+  display: flex;
+}
+
+.verification-payment {
+  width: 680px;
+  padding: 44px 33px 76px;
+  font-family: "Roboto Regular";
+  font-size: 24px;
+  color: #292929;
+  border-right: 1px dashed #e5e5e5;
+}
+
+.verif-payment-btn-wrapper {
+  display: flex;
+  align-items: end;
+}
+
+.verification-payment-button {
+  /* margin-right: 22px;
+  margin-bottom: 24px; */
+}
+
 .verification_button {
     height: 39px;
+    margin-left: 25px;
+    margin-bottom: 24px;
     padding: 0 60px 0 60px;
     font-weight: 700;
     font-size: 24px;

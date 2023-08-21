@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate} from 'react-router';
 import {nanoid} from 'nanoid';
+import moment from 'moment';
 
 import {stageChange} from '../../../../slices/stageSlice';
 import TrainCard from '../TrainCard/TrainCard';
@@ -20,6 +21,8 @@ function Verification() {
     const {passengers, passengersPrice} = useSelector(
         (state) => state.passengers
     );
+    const {payer} = useSelector(state => state.pay);
+
     const {orderStatus} = useSelector((state) => state.order);
 
     useEffect(() => {
@@ -45,7 +48,12 @@ function Verification() {
 
     const handlePassengers = () => {
         navigate('/order/passengers/');
-        document.documentElement.scrollTop = 0;
+        // document.documentElement.scrollTop = 0;
+    };
+
+    const handlePayment = () => {
+      navigate('/order/pay/');
+      // document.documentElement.scrollTop = 0;
     };
 
     return (
@@ -76,7 +84,7 @@ function Verification() {
                                         Пол {el.sex === 'male' ? 'мужской' : 'женский'}
                                     </p>
                                     <p className="passenger_card-content-text">
-                                        Дата рождения {el.birth}
+                                        Дата рождения {moment(el.birth, 'YYYY-MM-DD').format('DD.MM.YYYY')}
                                     </p>
                                     <p className="passenger_card-content-text">
                                         {el.type === 'adult'
@@ -118,6 +126,27 @@ function Verification() {
                     </div>
                 </div>
             </div>
+
+
+
+        <div className="verification-section">
+          <h4 className="title verification-title">Способ оплаты</h4>
+          <div className="verification-content">
+            <div className="verification-payment">
+              {payer.pay === 'cash' ? 'Наличными' : 'Онлайн'}
+            </div>
+
+            <div className="verif-payment-btn-wrapper">
+              <button
+                type="button"
+                className="button verification_button verification-payment-button"
+                onClick={handlePayment}
+              >
+                Изменить
+              </button>
+            </div>
+          </div>
+        </div>
 
             <div className="verification_buttons">
                 <button
