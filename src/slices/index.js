@@ -1,4 +1,4 @@
-import {configureStore} from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import searchReducer from './searchSlice';
 import stageReducer from './stageSlice';
 import filterSlice from './filterSlice';
@@ -9,14 +9,14 @@ import paySlice from './paySlice';
 import orderSlice from './orderSlice';
 
 export default configureStore({
-    reducer: {
-        search: searchReducer,
-        stage: stageReducer,
-        filter: filterSlice,
-        routes: routesSlice,
-        seats: seatsSlice,
-        passengers: passengersSlice,
-        pay: paySlice,
-        order: orderSlice,
-    },
+  reducer: {
+    search: searchReducer,
+    stage: stageReducer,
+    filter: filterSlice,
+    routes: routesSlice,
+    seats: seatsSlice,
+    passengers: passengersSlice,
+    pay: paySlice,
+    order: orderSlice,
+  },
 });

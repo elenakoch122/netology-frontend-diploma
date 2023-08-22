@@ -1,10 +1,10 @@
 /* eslint-disable camelcase */
-import React, {useState} from 'react';
-
-import {useSelector, useDispatch} from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
-import {filterChange} from '../../../slices/filterSlice';
+
+import { filterChange } from '../../../slices/filterSlice';
 
 export default function TimeFilter() {
   const {
@@ -16,22 +16,23 @@ export default function TimeFilter() {
     end_departure_hour_to,
     end_arrival_hour_from,
     end_arrival_hour_to,
-    // dateEnd,
   } = useSelector((state) => state.filter);
-  const {date_end} = useSelector((state) => state.search);
+
+  const { date_end } = useSelector((state) => state.search);
   const dispatch = useDispatch();
 
   const [isHidden, setHidden] = useState({
     departure: true,
     arrival: true,
   });
+
   const onHidden = (name) => {
-    setHidden((prev) => ({...prev, [name]: !prev[name]}));
+    setHidden((prev) => ({ ...prev, [name]: !prev[name] }));
   };
 
   const handleChange = (name, value) => {
-    dispatch(filterChange({name: `${name}_hour_from`, value: value.min}));
-    dispatch(filterChange({name: `${name}_hour_to`, value: value.max}));
+    dispatch(filterChange({ name: `${name}_hour_from`, value: value.min }));
+    dispatch(filterChange({ name: `${name}_hour_to`, value: value.max }));
   };
 
   return (
@@ -42,9 +43,8 @@ export default function TimeFilter() {
 
           <button
             type="button"
-            className={`time-filter__button ${
-                isHidden.departure ? 'active-button' : 'inactive-button'
-            }`}
+            className={`time-filter__button ${isHidden.departure ? 'active-button' : 'inactive-button'
+              }`}
             onClick={() => onHidden('departure')}
           />
         </div>
@@ -86,9 +86,8 @@ export default function TimeFilter() {
             <h4 className="time-filter__header-title title title-go-back">Обратно</h4>
             <button
               type="button"
-              className={`time-filter__button ${
-                  isHidden.arrival ? 'active-button' : 'inactive-button'
-              }`}
+              className={`time-filter__button ${isHidden.arrival ? 'active-button' : 'inactive-button'
+                }`}
               onClick={() => onHidden('arrival')}
             />
           </div>

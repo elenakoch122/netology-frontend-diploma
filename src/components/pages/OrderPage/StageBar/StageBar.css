@@ -1,107 +1,105 @@
 .stageBar {
-    position: relative;
+  position: relative;
 }
 
 .stageBar-gray {
-    background: #3e3c41;
+  background: #3e3c41;
 }
+
 .stageBar-yellow {
-    background: #ffa800;
+  background: #ffa800;
 }
 
 .stageBar_list {
-    list-style-type: none;
-    padding: 0;
-    height: 98px;
-    position: relative;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-
-    margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+  height: 98px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 auto;
 }
 
 .stageBar_list::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 3000px;
-    left: -3000px;
-    background: #ffa800;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 3000px;
+  left: -3000px;
+  background: #ffa800;
 }
 
 .stageBar_list-item {
-    font-family: "Roboto Bold";
-    font-size: 30px;
-    line-height: 98px;
-    flex-grow: 1;
-    text-align: start;
-    background: #3e3c41;
-    color: #ffffff;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
-    width: 355px;
+  font-family: "Roboto Bold";
+  font-size: 30px;
+  line-height: 98px;
+  flex-grow: 1;
+  text-align: start;
+  background: #3e3c41;
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  width: 355px;
 }
 
 .stageBar_list-item:first-child {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .activ::before {
-    z-index: 3;
-    content: '';
-    position: absolute;
-    top: -2;
-    right: -36px;
-    width: 0;
-    height: 0;
-
-    border-top: 49px solid transparent;
-    border-left: 37px solid #ffa800;
-    border-bottom: 49px solid transparent;
+  z-index: 3;
+  content: '';
+  position: absolute;
+  top: -2;
+  right: -36px;
+  width: 0;
+  height: 0;
+  border-top: 49px solid transparent;
+  border-left: 37px solid #ffa800;
+  border-bottom: 49px solid transparent;
 }
 
 .passed {
-    background: #ffa800;
+  background: #ffa800;
 }
 
 .stageBar_list-icon {
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 56px;
-    height: 56px;
-    padding: 10px;
-    margin-right: 28px;
-    border: 4px solid #fff;
-    border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 10px;
+  margin-right: 28px;
+  border: 4px solid #fff;
+  border-radius: 50%;
 }
 
 .stageBar_list-stage {
-    display: inline-block;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 42px;
+  display: inline-block;
+  font-size: 36px;
+  font-family: "Roboto Bold";
+  line-height: 42px;
 }
 
 .stages_wrapper {
-    width: 1470px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 1470px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stageBar_list-item:not(:first-child)::after {
-    z-index: 99;
-    height: 97px;
-    width: 37px;
-    content: '';
-    position: absolute;
-    background-image: url(../../../../images/form/vector.svg);
-    left: -2px;
-    top: 0;
+  z-index: 99;
+  height: 97px;
+  width: 37px;
+  content: '';
+  position: absolute;
+  background-image: url(../../../../images/form/vector.svg);
+  left: -2px;
+  top: 0;
 }

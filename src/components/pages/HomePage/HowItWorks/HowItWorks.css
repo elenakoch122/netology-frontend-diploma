@@ -1,9 +1,9 @@
 .how-it-works {
-    background-image: url('../../../../images/backgrounds/how-it-works-background.png');
-    background-color: rgb(187, 100, 0);
-    background-size: cover;
-    height: 575px;
-    vertical-align: middle;
+  background-image: url('../../../../images/backgrounds/how-it-works-background.png');
+  background-color: rgb(187, 100, 0);
+  background-size: cover;
+  height: 575px;
+  vertical-align: middle;
 }
 
 .how-it-works__wrapper {
@@ -14,54 +14,54 @@
 }
 
 .how-it-works__title {
-    margin-bottom: 30px;
-    padding-top: 70px;
-    text-transform: uppercase;
-    font-family: "Roboto Medium";
-    font-size: 36px;
-    line-height: 42px;
-    color: #FFFFFF;
-    position: relative;
+  margin-bottom: 30px;
+  padding-top: 70px;
+  text-transform: uppercase;
+  font-family: "Roboto Medium";
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+  position: relative;
 }
 
 .how-it-works__learn-more {
-    padding: 15px 76px;
-    font-family: "Roboto Bold";
-    font-size: 24px;
-    line-height: normal;
-    color: #FFF;
-    outline: 1px solid #fff;
-    text-decoration: none;
-    cursor: pointer;
-    transition: .3s;
+  padding: 15px 76px;
+  font-family: "Roboto Bold";
+  font-size: 24px;
+  line-height: normal;
+  color: #FFF;
+  outline: 1px solid #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .3s;
 }
 
 .how-it-works__learn-more:hover {
-    outline-color: #9c5120;
-    background: #fff;
-    color: #9c5120;
+  outline-color: #9c5120;
+  background: #fff;
+  color: #9c5120;
 }
 
 .how-it-works__elements {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
 }
 
 .how-it-works__element-image {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .how-it-works__element-text {
-    width: 280px;
-    height: 72px;
-    margin-top: 34px;
-    font-style: normal;
-    font-family: "Roboto Regular";
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
+  width: 280px;
+  height: 72px;
+  margin-top: 34px;
+  font-style: normal;
+  font-family: "Roboto Regular";
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
 }

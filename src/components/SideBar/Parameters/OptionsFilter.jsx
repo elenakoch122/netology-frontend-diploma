@@ -1,5 +1,6 @@
 import React from 'react';
-import {nanoid} from 'nanoid';
+import { nanoid } from 'nanoid';
+
 import Options from './ОptionsFilterОption';
 
 import firstClass from '../../../images/sideBar/firstClass.svg';
@@ -17,7 +18,7 @@ export default function OptionsFilter() {
         <Options key={nanoid()} name="have_third_class" alt="Плацкарт" src={thirdClass} />
         <Options key={nanoid()} name="have_fourth_class" alt="Сидячий" src={fourthClass} />
         <Options key={nanoid()} name="have_first_class" alt="Люкс" src={firstClass} />
-        <Options key={nanoid()} name="have_wifi" alt="Wi-Fi" src={wifi}/>
+        <Options key={nanoid()} name="have_wifi" alt="Wi-Fi" src={wifi} />
         <Options key={nanoid()} name="have_express" alt="Экспресс" src={express} />
       </ul>
     </div>

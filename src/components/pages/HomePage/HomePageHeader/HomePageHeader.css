@@ -1,14 +1,14 @@
 .home-page {
-    background-color: rgb(187, 100, 0);
-    background-size: cover;
-    background-image: url('../../../../images/backgrounds/main_background.png');
-    border-bottom: 8px solid #FFA800;
-    vertical-align: middle;
+  background-color: rgb(187, 100, 0);
+  background-size: cover;
+  background-image: url('../../../../images/backgrounds/main_background.png');
+  border-bottom: 8px solid #FFA800;
+  vertical-align: middle;
 }
 
 .home-header {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .logo-wrapper {
@@ -28,8 +28,8 @@
 }
 
 .header-title {
-    margin-left: 14%;
-    padding-top: 400px;
+  margin-left: 14%;
+  padding-top: 400px;
 }
 
 .header-title__tagline {

@@ -9,11 +9,11 @@ import Reviews from './Reviews/Reviews';
 export default function HomePage() {
   return (
     <div>
-      <HomePageHeader/>
-      <About/>
-      <HowItWorks/>
-      <Reviews/>
-      <Footer/>
+      <HomePageHeader />
+      <About />
+      <HowItWorks />
+      <Reviews />
+      <Footer />
     </div>
   );
 }

@@ -1,83 +1,83 @@
 .search-form-inputs {
-    display: inline-flex;
-    margin-top: 15px;
+  display: inline-flex;
+  margin-top: 15px;
 }
 
 .search-form-inputs__direction-input {
-    font-family: "Roboto Regular";
-    font-size: 18px;
-    line-height: 21px;
-    padding-left: 20px;
-    width: 325px;
-    height: 60px;
-    text-transform: capitalize;
-    border-radius: 5px;
-    background: #FFFFFF url('../../images/icons/geo.png') no-repeat right 10px center;
-    color: #292929;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  line-height: 21px;
+  padding-left: 20px;
+  width: 325px;
+  height: 60px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  background: #FFFFFF url('../../images/icons/geo.png') no-repeat right 10px center;
+  color: #292929;
 }
 
 .search-form-inputs__direction-input::placeholder {
-    font-family: "Roboto Regular";
-    font-size: 18px;
-    line-height: 21px;
-    color: #E5E5E5;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  line-height: 21px;
+  color: #E5E5E5;
 }
 
 .search-form-inputs__arrows-wrapper {
-    padding-top: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .search-form-inputs__arrows {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .search-form-inputs__space-wrapper {
-    padding-left: 32px;
+  padding-left: 32px;
 }
 
 .input-date-picker__date-input {
-    font-family: "Roboto Regular";
-    font-size: 18px;
-    line-height: 21px;
-    padding-left: 20px;
-    width: 325px;
-    height: 60px;
-    border-radius: 5px;
-    background: #FFFFFF url('../../images/icons/date.png') no-repeat right 10px center;
-    color: #292929;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  line-height: 21px;
+  padding-left: 20px;
+  width: 325px;
+  height: 60px;
+  border-radius: 5px;
+  background: #FFFFFF url('../../images/icons/date.png') no-repeat right 10px center;
+  color: #292929;
 }
 
 .input-date-picker__date-input::placeholder {
-    font-family: "Roboto Regular";
-    font-size: 18px;
-    line-height: 21px;
-    color: #E5E5E5;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  line-height: 21px;
+  color: #E5E5E5;
 }
 
 .autocomplete-list {
-    position: absolute;
-    width: 325px;
-    z-index: 3;
-    top: 62px;
-    right: 0;
-    left: 0;
-    padding: 19px 21px 11px 21px;
-    border-radius: 3px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: #f5f4f6;
+  position: absolute;
+  width: 325px;
+  z-index: 3;
+  top: 62px;
+  right: 0;
+  left: 0;
+  padding: 19px 21px 11px 21px;
+  border-radius: 3px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #f5f4f6;
 }
 
 .autocomplete-item {
-    font-size: 18px;
-    line-height: 21px;
-    font-variant: small-caps;
-    font-weight: 400;
-    cursor: pointer;
-    color: #292929;
+  font-size: 18px;
+  line-height: 21px;
+  font-variant: small-caps;
+  font-family: "Roboto Regular";
+  cursor: pointer;
+  color: #292929;
 }
 
 .search-form_route-container {
-    position: relative;
+  position: relative;
 }

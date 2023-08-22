@@ -1,10 +1,10 @@
 import React from 'react';
-import {HashLink} from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import './Menu.css';
 
 export default function Menu() {
   const list = [
-    { text: 'О нас', link: '/#about'},
+    { text: 'О нас', link: '/#about' },
     { text: 'Как это работает', link: '/#how-it-works' },
     { text: 'Отзывы', link: '/#reviews' },
     { text: 'Контакты', link: '/#contacts' },

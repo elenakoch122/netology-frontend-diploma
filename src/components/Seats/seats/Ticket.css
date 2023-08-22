@@ -1,168 +1,165 @@
 .ticket {
-    background: #ffffff;
-    border: 1px solid #c4c4c4;
-    box-sizing: border-box;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-    width: 963px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  width: 963px;
 }
 
 .ticket_header-actions {
-    margin-top: 36px;
-    display: flex;
+  margin-top: 36px;
+  display: flex;
 }
 
 .ticket_header-actions.routeBack {
-    justify-content: end;
-    margin-right: 24px;
+  justify-content: end;
+  margin-right: 24px;
 }
 
 .ticket__header-icon {
-    margin-left: 19px;
-    margin-right: 10px;
+  margin-left: 19px;
+  margin-right: 10px;
 }
 
 .ticket_header-button {
-    font-weight: 700;
-    font-size: 24px;
-    color: #292929;
-    padding: 0 33px 0 33px;
-    border: 1px solid #292929;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #ffffff;
-    cursor: pointer;
+  font-family: "Roboto Bold";
+  font-size: 24px;
+  color: #292929;
+  padding: 0 33px 0 33px;
+  border: 1px solid #292929;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
 .ticket_header-button:hover {
-    color: #ffa800;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #ffa800;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .ticket_header-button:active {
-    background: #ffa800;
-    color: #292929;
+  background: #ffa800;
+  color: #292929;
 }
 
 .train.ticket_header-train {
-    background: #f7f6f6;
+  background: #f7f6f6;
 }
 
 .seats .train_logo {
-    background: #f7f6f6;
+  background: #f7f6f6;
 }
 
 .seats .train {
-    width: 100%;
-    box-sizing: content-box;
-    box-shadow: none;
-    border: none;
-    min-width: auto;
-    min-height: auto;
-    margin-bottom: 40px;
+  width: 100%;
+  box-sizing: content-box;
+  box-shadow: none;
+  border: none;
+  min-width: auto;
+  min-height: auto;
+  margin-bottom: 40px;
 }
 
 .seats .train_logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: auto;
-    padding: 0 15px 0 0;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: auto;
+  padding: 0 15px 0 0;
+  position: relative;
 }
 
 .seats .train_logo::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 0;
-    right: 0;
-    border: 1px solid #ffffff;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0;
+  right: 0;
+  border: 1px solid #ffffff;
 }
 
 .seats .train_logo-icon {
-    margin: 0 27px 0 35px;
+  margin: 0 27px 0 35px;
 }
 
 .seats .train_title {
-    width: 153px;
-    align-self: auto;
+  width: 153px;
+  align-self: auto;
 }
 
 .seats .train_name {
-    margin-bottom: 5px;
-    align-self: auto;
+  margin-bottom: 5px;
+  align-self: auto;
 }
 
 .seats .train_routes {
-    align-self: center;
-    width: auto;
-    padding: 28px 36px 26px 36px;
-    position: relative;
+  align-self: center;
+  width: auto;
+  padding: 28px 36px 26px 36px;
+  position: relative;
 }
 
 .seats .train_routes::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid #ffffff;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #ffffff;
 }
 
 .seats .train_route-duration {
-    align-self: center;
-    margin: 0 54px 0 20px;
+  align-self: center;
+  margin: 0 54px 0 20px;
 }
 
 .seats .train_info {
-    border: none;
-    align-self: center;
-    width: auto;
-    padding: 0 0 0 35px;
-}
-
-.seats .train_icon-clock {
+  border: none;
+  align-self: center;
+  width: auto;
+  padding: 0 0 0 35px;
 }
 
 .seats .train__info-duration {
-    margin-left: 10px;
-    width: 100px;
-    font-family: "Roboto Regular";
-    font-size: 18px;
-    color: #000;
+  margin-left: 10px;
+  width: 100px;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  color: #000;
 }
 
 .seats .train_time {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .ticket {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .ticket_title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
-    color: #292929;
-    margin-left: 17px;
-    margin-top: 27px;
+  font-family: "Roboto Bold";
+  font-size: 30px;
+  line-height: 35px;
+  color: #292929;
+  margin-left: 17px;
+  margin-top: 27px;
 }
 
 .ticket_count {
-    position: relative;
-    margin-bottom: 77px;
+  position: relative;
+  margin-bottom: 77px;
 }
 
 .ticket_count::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0;
-    bottom: -49px;
-    border: 1px dashed #c4c4c4;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: -49px;
+  border: 1px dashed #c4c4c4;
 }
 
 .ticket_count-title {
@@ -170,12 +167,12 @@
 }
 
 .ticket_count-wrapper {
-    display: flex;
+  display: flex;
 }
 
 .ticket_count-card {
-    width: 33.33%;
-    padding: 20px 35px 0 35px;
+  width: 33.33%;
+  padding: 20px 35px 0 35px;
 }
 
 .ticket_count-card:hover {
@@ -188,18 +185,18 @@
 }
 
 .ticket_count-list {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #928f94;
-    border-radius: 5px;
-    background-color: #ffffff;
-    font-size: 18px;
-    line-height: 21px;
-    color: #292929;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #928f94;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 18px;
+  line-height: 21px;
+  color: #292929;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
 }
 
 .ticket_count-list option {
@@ -207,16 +204,16 @@
 }
 
 .ticket_count-text {
-    margin-top: 23px;
-    margin-bottom: 20px;
-    font-family: "Roboto Regular";
-    font-size: 16px;
-    line-height: 19px;
-    color: #928F94;
+  margin-top: 23px;
+  margin-bottom: 20px;
+  font-family: "Roboto Regular";
+  font-size: 16px;
+  line-height: 19px;
+  color: #928F94;
 }
 
 .ticket_count-list::-ms-expand {
-    display: none;
+  display: none;
 }
 
 .ticket_class-title {
@@ -224,84 +221,80 @@
 }
 
 .ticket_class-list {
-    list-style-type: none;
-    display: flex;
-    margin-left: 30px;
-    margin-bottom: 30px;
+  list-style-type: none;
+  display: flex;
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .ticket_class-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ticket_class-item:nth-child(n + 2) {
-    margin-left: 150px;
+  margin-left: 150px;
 }
 
 .ticket_class-button {
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .ticket__class-icon {
-    fill: #c4c4c4;
+  fill: #c4c4c4;
 }
 
 .ticket_class-name {
-    margin-top: 18px;
-    font-size: 24px;
-    color: #928f94;
+  margin-top: 18px;
+  font-size: 24px;
+  color: #928f94;
 }
 
 .ticket_class-button--active .ticket__class-icon {
-    fill: #ffa800;
+  fill: #ffa800;
 }
 
 .ticket_class-button--active .ticket_class-name {
-    color: #ffa800;
-}
-
-.ticket_coach {
+  color: #ffa800;
 }
 
 .ticket_coach-header {
-    min-height: 37px;
-    background: rgba(255, 168, 0, 0.44);
-    display: flex;
-    align-items: center;
+  min-height: 37px;
+  background: rgba(255, 168, 0, 0.44);
+  display: flex;
+  align-items: center;
 }
 
 .ticket_coach-list {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    margin-left: 30px;
-    /* margin: 0; */
-    font-weight: 400;
-    font-size: 18px;
-    color: #2d2b2f;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-left: 30px;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  color: #2d2b2f;
 }
 
 .ticket_coach-item {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    margin-left: 7px;
-    color: #292929;
-    cursor: pointer;
+  font-family: "Roboto Bold";
+  font-size: 24px;
+  line-height: 28px;
+  margin-left: 7px;
+  color: #292929;
+  cursor: pointer;
 }
 
 .ticket_coach-item--active {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .ticket_coach-numbering {
-    font-family: "Roboto Regular";
-    font-size: 16px;
-    line-height: 19px;
-    color: #292929;
-    margin: 0 20px 0 auto;
+  font-family: "Roboto Regular";
+  font-size: 16px;
+  line-height: 19px;
+  color: #292929;
+  margin: 0 20px 0 auto;
 }

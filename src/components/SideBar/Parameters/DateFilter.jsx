@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types, react/no-unstable-nested-components */
-
-import React, {forwardRef, useEffect, useState} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import React, { forwardRef, useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import ru from 'date-fns/locale/ru';
 import 'react-datepicker/dist/react-datepicker.css';
-import {searchFieldChange} from "../../../slices/searchSlice";
+
+import { searchFieldChange } from "../../../slices/searchSlice";
 
 export default function DateFilter() {
   const dispatch = useDispatch();
@@ -30,6 +30,7 @@ export default function DateFilter() {
   const handleChange = (name, date) => {
     const str = date.toLocaleDateString();
     const format = `${str.slice(-4)}-${str.slice(3, 5)}-${str.slice(0, 2)}`;
+
     dispatch(
       searchFieldChange({
         name,
@@ -38,7 +39,7 @@ export default function DateFilter() {
     );
   };
 
-  const Input = forwardRef(({value, onClick}, ref) => (
+  const Input = forwardRef(({ value, onClick }, ref) => (
     <input
       className="date-filter__field date-filter__field--date"
       type="text"

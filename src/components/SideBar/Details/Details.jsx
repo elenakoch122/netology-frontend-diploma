@@ -1,24 +1,23 @@
 /* eslint-disable radix */
-
 import React, { useState } from 'react';
-import moment from 'moment';
 import { useSelector } from 'react-redux';
+import moment from 'moment';
+import './Details.css';
+
 import { departureSvg, arrivalSvg } from '../../../images/svg';
 import rub from '../../../images/tickets/tickets-rub.svg';
-import './Details.css';
-import PriceFormat from "../../PriceFormat/PriceFormat";
 
 export default function Details() {
   const { train } = useSelector((state) => state.seats.train);
   const { departure, arrival } = train;
-  const { passengersCount, passengersPrice } = useSelector(
-    (state) => state.passengers
-  );
+  const { passengersCount, passengersPrice } = useSelector((state) => state.passengers);
+
   const [isHidden, setHidden] = useState({
     departure: true,
     arrival: true,
     passengers: true,
   });
+
   const onHidden = (name) => {
     setHidden((prev) => ({ ...prev, [name]: !prev[name] }));
   };
@@ -32,6 +31,7 @@ export default function Details() {
   return (
     <section className="details">
       <h3 className="title details_title">Детали поездки</h3>
+
       <div className="sidebar_inner">
         <div className="sidebar_header title-go-there">
           <h4 className="title title--small sidebar_title">
@@ -40,11 +40,11 @@ export default function Details() {
               {moment.unix(departure.from.datetime).format('DD.MM.YYYY')}
             </span>
           </h4>
+
           <button
             type="button"
-            className={`details_departure details_button ${
-              !isHidden.departure ? 'active-button' : 'inactive-button'
-            }`}
+            className={`details_departure details_button ${!isHidden.departure ? 'active-button' : 'inactive-button'
+              }`}
             onClick={() => onHidden('departure')}
           />
         </div>
@@ -52,6 +52,7 @@ export default function Details() {
         <div className={`details-wrapper ${isHidden.departure ? '' : 'hidden'}`}>
           <div className="details_info">
             <p className="details_info-title">№ Поезда</p>
+
             <p className="details_info-text details_info-text--train">
               {departure.train.name}
             </p>
@@ -59,9 +60,9 @@ export default function Details() {
 
           <div className="details_info details_info--city">
             <p className="details_info-title">Название</p>
+
             <p className="details_info-text details_info-text--route">
-              {departure.from.city.name}
-              <br />
+              {departure.from.city.name}<br />
               {departure.to.city.name}
             </p>
           </div>
@@ -74,6 +75,7 @@ export default function Details() {
                     .unix(departure.from.datetime)
                     .format('HH:mm')}
                 </p>
+
                 <p className="route_date">
                   {moment
                     .unix(departure.from.datetime)
@@ -85,6 +87,7 @@ export default function Details() {
                 <p className="route_duration-time">
                   {formatSeconds(departure.duration)}
                 </p>
+
                 {departureSvg}
               </div>
 
@@ -92,6 +95,7 @@ export default function Details() {
                 <p className="route_time">
                   {moment.unix(departure.to.datetime).format('hh:mm')}
                 </p>
+
                 <p className="route_date">
                   {moment
                     .unix(departure.to.datetime)
@@ -103,18 +107,18 @@ export default function Details() {
             <div className="route">
               <div className="route_info">
                 <p className="route_city">{departure.from.city.name}</p>
+
                 <p className="route_station">
-                  {departure.from.railway_station_name}
-                  <br />
+                  {departure.from.railway_station_name}<br />
                   вокзал
                 </p>
               </div>
 
               <div className="route_info route_info--right">
                 <p className="route_city">{departure.to.city.name}</p>
+
                 <p className="route_station">
-                  {departure.to.railway_station_name}
-                  <br />
+                  {departure.to.railway_station_name}<br />
                   вокзал
                 </p>
               </div>
@@ -137,9 +141,8 @@ export default function Details() {
 
             <button
               type="button"
-              className={`details_arrival details_button ${
-                !isHidden.arrival ? 'active-button' : 'inactive-button'
-              }`}
+              className={`details_arrival details_button ${!isHidden.arrival ? 'active-button' : 'inactive-button'
+                }`}
               onClick={() => onHidden('arrival')}
             />
           </div>
@@ -147,6 +150,7 @@ export default function Details() {
           <div className={`details-wrapper ${isHidden.arrival ? '' : 'hidden'}`}>
             <div className="details_info">
               <p className="details_info-title">№ Поезда</p>
+
               <p className="details_info-text details_info-text--train">
                 {arrival.train.name}
               </p>
@@ -154,9 +158,9 @@ export default function Details() {
 
             <div className="details_info details_info--city">
               <p className="details_info-title">Название</p>
+
               <p className="details_info-text details_info-text--route">
-                {arrival.from.city.name}
-                <br />
+                {arrival.from.city.name}<br />
                 {arrival.to.city.name}
               </p>
             </div>
@@ -181,6 +185,7 @@ export default function Details() {
                   <p className="route_duration-time">
                     {formatSeconds(arrival.duration)}
                   </p>
+
                   {arrivalSvg}
                 </div>
 
@@ -188,6 +193,7 @@ export default function Details() {
                   <p className="route_time">
                     {moment.unix(arrival.to.datetime).format('hh:mm')}
                   </p>
+
                   <p className="route_date">
                     {moment
                       .unix(arrival.to.datetime)
@@ -201,18 +207,18 @@ export default function Details() {
                   <p className="route_city">
                     {arrival.from.city.name}
                   </p>
+
                   <p className="route_station">
-                    {arrival.from.railway_station_name}
-                    <br />
+                    {arrival.from.railway_station_name}<br />
                     вокзал
                   </p>
                 </div>
 
                 <div className="route_info route_info--right">
                   <p className="route_city">{arrival.to.city.name}</p>
+
                   <p className="route_station">
-                    {arrival.to.railway_station_name}
-                    <br />
+                    {arrival.to.railway_station_name}<br />
                     вокзал
                   </p>
                 </div>
@@ -224,14 +230,12 @@ export default function Details() {
 
       <div className="sidebar_inner">
         <div className="sidebar_header sidebar_header--passengers">
-          <h4 className="title title--small title-passengers">
-            Пассажиры
-          </h4>
+          <h4 className="title title--small title-passengers">Пассажиры</h4>
+
           <button
             type="button"
-            className={`details_passengers details_button ${
-              !isHidden.passengers ? 'active-button' : 'inactive-button'
-            }`}
+            className={`details_passengers details_button ${!isHidden.passengers ? 'active-button' : 'inactive-button'
+              }`}
             onClick={() => onHidden('passengers')}
           />
         </div>
@@ -244,18 +248,17 @@ export default function Details() {
                 {Number(passengersCount.adult) === 1 ? 'й' : 'х'}
               </span>
 
-              <PriceFormat
-                title="details_passenger-price"
-                value={
+              <span className="details_passenger-price-value currency-item">
+                {(
                   arrival
                     ? passengersPrice.departure.adult +
-                      passengersPrice.arrival.adult +
-                      passengersPrice.departure.services +
-                      passengersPrice.arrival.services
+                    passengersPrice.arrival.adult +
+                    passengersPrice.departure.services +
+                    passengersPrice.arrival.services
                     : passengersPrice.departure.adult +
-                      passengersPrice.departure.services
-                }
-              />
+                    passengersPrice.departure.services
+                ).toLocaleString('ru')}
+              </span>
               <img className="details-currency" src={rub} alt="руб." />
             </li>
 
@@ -269,18 +272,17 @@ export default function Details() {
                     Ребен
                     {Number(passengersCount.child) +
                       Number(passengersCount.baby) ===
-                    1
+                      1
                       ? 'ок'
                       : 'ка'}
                   </span>
 
-                  <PriceFormat
-                    title="details_passenger-price"
-                    value={
+                  <span className="details_passenger-price-value currency-item">
+                    {(
                       passengersPrice.departure.child +
                       passengersPrice.arrival.child
-                    }
-                  />
+                    ).toLocaleString('ru')}
+                  </span>
 
                   <img
                     className="details-currency"
@@ -288,24 +290,24 @@ export default function Details() {
                     alt="руб."
                   />
                 </li>
-            )}
+              )}
           </ul>
         </div>
       </div>
 
       <div className="details_footer">
         <h3 className="title title--small details_footer-title">Итог</h3>
-        <PriceFormat
-          title="details_footer-total"
-          value={
+
+        <span className="details_footer-total-value currency-item">
+          {(
             passengersPrice.departure.adult +
             passengersPrice.arrival.adult +
             passengersPrice.departure.child +
             passengersPrice.arrival.child +
             passengersPrice.departure.services +
             passengersPrice.arrival.services
-          }
-        />
+          ).toLocaleString('ru')}
+        </span>
         <img className="details-currency-total" src={rub} alt="руб." />
       </div>
     </section>

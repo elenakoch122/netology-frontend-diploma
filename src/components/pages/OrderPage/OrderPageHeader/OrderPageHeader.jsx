@@ -1,10 +1,10 @@
 import React from 'react';
 import './OrderPageHeader.css';
+
 import Logo from "../../../Logo/Logo";
 import Menu from "../../../Menu/Menu";
 import OrderSearchForm from "../OrderSearchForm/OrderSearchForm";
 import StageBar from "../StageBar/StageBar";
-
 
 export default function OrderPageHeader() {
   return (
@@ -12,9 +12,10 @@ export default function OrderPageHeader() {
       <div className="logo-wrapper">
         <Logo />
       </div>
-      <Menu/>
-      <OrderSearchForm/>
-      <StageBar/>
+
+      <Menu />
+      <OrderSearchForm />
+      <StageBar />
     </header>
   );
 }

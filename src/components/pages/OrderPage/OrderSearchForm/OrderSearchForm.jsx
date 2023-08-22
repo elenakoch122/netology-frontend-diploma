@@ -1,13 +1,13 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
-import {useNavigate} from "react-router";
-
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 import './OrderSearchForm.css';
+
 import DirectionInputs from "../../../SearchFormInputs/DirectionInputs";
 import InputDatePicker from "../../../SearchFormInputs/InputDatePicker";
-import {fetchRoutes} from "../../../../slices/routesSlice";
+import { fetchRoutes } from "../../../../slices/routesSlice";
 
-function OrderSearchForm() {
+export default function OrderSearchForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -32,6 +32,7 @@ function OrderSearchForm() {
             <InputDatePicker />
           </label>
         </div>
+
         <div className='order-search-form__button-wrapper'>
           <button className='order-search-form__button' type='button' onClick={onSubmit}>Найти билеты</button>
         </div>
@@ -39,5 +40,3 @@ function OrderSearchForm() {
     </div>
   )
 }
-
-export default OrderSearchForm;

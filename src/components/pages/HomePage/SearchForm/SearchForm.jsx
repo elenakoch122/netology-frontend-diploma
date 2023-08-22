@@ -1,11 +1,11 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
-import {useNavigate} from 'react-router';
+import { useDispatch } from "react-redux";
+import { useNavigate } from 'react-router';
 import './SearchForm.css';
 
 import InputDatePicker from "../../../SearchFormInputs/InputDatePicker";
 import DirectionInputs from "../../../SearchFormInputs/DirectionInputs";
-import {fetchRoutes} from "../../../../slices/routesSlice";
+import { fetchRoutes } from "../../../../slices/routesSlice";
 
 export default function SearchForm() {
   const dispatch = useDispatch();
@@ -23,14 +23,14 @@ export default function SearchForm() {
       <div className="search-form__block">
         <label className='search-form__label'>
           Направление
-          <DirectionInputs/>
+          <DirectionInputs />
         </label>
       </div>
 
       <div className="search-form__block">
         <label className='search-form__label'>
           Дата
-          <InputDatePicker/>
+          <InputDatePicker />
         </label>
       </div>
 

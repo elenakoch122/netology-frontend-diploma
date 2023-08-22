@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Footer.css';
 
 import Logo from '../Logo/Logo';
@@ -24,25 +23,25 @@ export default function Footer() {
 
             <ul className="footer__contacts-list">
               <li className="footer__contacts-item">
-                <img className="footer__contacts-icon" src={phone} alt=""/>
+                <img className="footer__contacts-icon" src={phone} alt="" />
                 <p className="footer__contacts-text">8 (800) 000 00 00</p>
               </li>
 
               <li className="footer__contacts-item">
-                <img className="footer__contacts-icon" src={email} alt=""/>
+                <img className="footer__contacts-icon" src={email} alt="" />
                 <p className="footer__contacts-text">inbox@mail.ru</p>
               </li>
 
               <li className="footer__contacts-item">
-                <img className="footer__contacts-icon" src={skype} alt=""/>
+                <img className="footer__contacts-icon" src={skype} alt="" />
                 <p className="footer__contacts-text">tu.train.tickets</p>
               </li>
 
               <li className="footer__contacts-item">
-                <img className="footer__contacts-icon" src={geo} alt=""/>
+                <img className="footer__contacts-icon" src={geo} alt="" />
                 <p className="footer__contacts-text">
-                  г. Москва<br/>
-                  ул. Московская 27-35<br/>
+                  г. Москва<br />
+                  ул. Московская 27-35<br />
                   555 555
                 </p>
               </li>
@@ -50,9 +49,7 @@ export default function Footer() {
           </section>
 
           <section className="footer__subscribe">
-            <h3 className="footer_subscribe-title footer-title">
-                Подписка
-            </h3>
+            <h3 className="footer_subscribe-title footer-title">Подписка</h3>
 
             <form className="footer_form">
               <label className="footer__form-label" htmlFor="subscription">
@@ -82,33 +79,33 @@ export default function Footer() {
 
             <div className="footer_subscribe-icons">
               <a href="#/" className="footer__subscribe-link" title='Youtube'>
-                <img src={youtube} alt=""/>
+                <img src={youtube} alt="" />
               </a>
 
               <a href="#/" className="footer__subscribe-link" title='Linked In'>
-                <img src={linkedin} alt=""/>
+                <img src={linkedin} alt="" />
               </a>
 
               <a href="#/" className="footer__subscribe-link" title='Google'>
-                <img src={google} alt=""/>
+                <img src={google} alt="" />
               </a>
 
               <a href="#/" className="footer__subscribe-link" title='Facebook'>
-                <img src={facebook} alt=""/>
+                <img src={facebook} alt="" />
               </a>
 
               <a href="#/" className="footer__subscribe-link" title='Twitter'>
-                <img src={twitter} alt=""/>
+                <img src={twitter} alt="" />
               </a>
             </div>
           </section>
         </div>
       </div>
 
-      <div className='line'/>
+      <div className='line' />
 
       <div className='footer__bottom-wrapper'>
-        <Logo/>
+        <Logo />
         <img
           className='footer__up-arrow'
           src={upArrow}
