@@ -24,6 +24,10 @@
   padding-left: 0;
 }
 
+.train-selector__cards li {
+  margin-bottom: 50px;
+}
+
 .train-selector__pages {
   list-style: none;
   padding-left: 0;

@@ -11,8 +11,8 @@ export default  function InputDatePicker() {
   const dispatch = useDispatch();
   const dateStart = useSelector((state) => state.search.date_start);
   const dateEnd = useSelector((state) => state.search.date_end);
-  const [start, setStart] = useState(new Date(1616400000));
-  const [end, setEnd] = useState(new Date(1616400000));
+  const [start, setStart] = useState('');
+  const [end, setEnd] = useState('');
 
   useEffect(() => {
     if (dateStart) {
@@ -45,6 +45,7 @@ export default  function InputDatePicker() {
         placeholderText='ДД/ММ/ГГ'
         dateFormat="dd/MM/yy"
         selected={start}
+        minDate={Date.now()}
         selectsStart
         onChange={(date) => handleChange('date_start', date)}
         customInput={
