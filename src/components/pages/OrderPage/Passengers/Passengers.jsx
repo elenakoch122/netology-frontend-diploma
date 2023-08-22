@@ -34,7 +34,7 @@ function Passengers() {
 
     const handleClick = () => {
         navigate('/order/pay/');
-        document.documentElement.scrollTop = 0;
+        // document.documentElement.scrollTop = 0;
     };
 
     return (

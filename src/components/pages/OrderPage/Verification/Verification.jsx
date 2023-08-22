@@ -11,7 +11,6 @@ import passenger from '../../../../images/icons/passenger.svg';
 import './Verification.css';
 import rub from '../../../../images/tickets/tickets-rub.svg';
 import {clearStatus, fetchOrder} from '../../../../slices/orderSlice';
-import PriceFormat from "../../../PriceFormat/PriceFormat";
 
 function Verification() {
     const dispatch = useDispatch();
@@ -99,17 +98,16 @@ function Verification() {
                     <div className="verification_price">
                         <div className="verification_price-wrapper">
                             <p className="verification_price-name">Всего</p>
-                            <PriceFormat
-                                title="verification_price-sum"
-                                value={
-                                    passengersPrice.departure.child +
-                                    passengersPrice.departure.adult +
-                                    passengersPrice.departure.services +
-                                    passengersPrice.arrival.child +
-                                    passengersPrice.arrival.adult +
-                                    passengersPrice.arrival.services
-                                }
-                            />
+                            <span className="verification_price-sum-value currency-item">
+                              {(
+                                passengersPrice.departure.child +
+                                passengersPrice.departure.adult +
+                                passengersPrice.departure.services +
+                                passengersPrice.arrival.child +
+                                passengersPrice.arrival.adult +
+                                passengersPrice.arrival.services
+                              ).toLocaleString('ru')}
+                            </span>
                             <img
                                 className="verification-currency"
                                 src={rub}

@@ -19,7 +19,6 @@ import {
     food,
 } from '../../../../images/svg';
 
-import PriceFormat from '../../../PriceFormat/PriceFormat';
 import Duration from './Duration';
 import {trainAdd} from "../../../../slices/seatsSlice";
 
@@ -160,15 +159,15 @@ function TrainCard(route, type) {
                                     </p>
                                     <span className="train_seats-price">
                               от
-                              <PriceFormat
-                                  title="train_seats-price"
-                                  value={departure.price_info.fourth.top_price}
-                              />{' '}
-                                        <img
-                                            className="train_seats-price-currency"
-                                            src={rub}
-                                            alt="rub"
-                                        />
+                              <span className="train_seats-price-value currency-item">
+                                {departure.price_info.fourth.top_price.toLocaleString('ru')}
+                              </span>
+                              {' '}
+                              <img
+                                  className="train_seats-price-currency"
+                                  src={rub}
+                                  alt="rub"
+                              />
                            </span>
                                 </li>
                             )}
@@ -180,10 +179,9 @@ function TrainCard(route, type) {
                                     </p>
                                     <span className="train_seats-price">
                               от
-                              <PriceFormat
-                                  title="train_seats-price"
-                                  value={departure.price_info.third.side_price}
-                              />
+                              <span className="train_seats-price-value currency-item">
+                                {departure.price_info.third.side_price.toLocaleString('ru')}
+                              </span>
                               <img
                                   className="train_seats-price-currency"
                                   src={rub}
@@ -200,12 +198,9 @@ function TrainCard(route, type) {
                                     </p>
                                     <span className="train_seats-price">
                               от
-                              <PriceFormat
-                                  title="train_seats-price"
-                                  value={
-                                      departure.price_info.second.bottom_price
-                                  }
-                              />
+                              <span className="train_seats-price-value currency-item">
+                                {departure.price_info.second.bottom_price.toLocaleString('ru')}
+                              </span>
                               <img
                                   className="train_seats-price-currency"
                                   src={rub}
@@ -222,10 +217,9 @@ function TrainCard(route, type) {
                                     </p>
                                     <span className="train_seats-price">
                               от
-                              <PriceFormat
-                                  title="train_seats-price"
-                                  value={departure.price_info.first.top_price}
-                              />
+                              <span className="train_seats-price-value currency-item">
+                                {departure.price_info.first.top_price.toLocaleString('ru')}
+                              </span>
                               <img
                                   className="train_seats-price-currency"
                                   src={rub}

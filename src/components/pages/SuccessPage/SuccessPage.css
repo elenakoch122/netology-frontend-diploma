@@ -1,20 +1,27 @@
 .success-page {
-    min-width: 1700px;
+  min-width: 1700px;
 }
 
 .success-page-header {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('../../../images/backgrounds/success_background.png');
-    vertical-align: middle;
-    height: 834px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../images/backgrounds/success_background.png');
+  vertical-align: middle;
+  height: 830px;
 }
 
-.success-page-title {
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 84px;
-    color: #FFFFFF;
-    margin-left: calc(50% - 702px);
-    margin-top: 350px;
+.success-page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.menu-wrapper {
+  position: relative;
+  z-index: 3;
 }

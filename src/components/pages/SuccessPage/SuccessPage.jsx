@@ -9,9 +9,12 @@ function SuccessPage() {
     return (
         <div className="success-page">
             <div className="success-page-header">
-                <Logo/>
-                <Menu/>
-                <div className="success-page-title">Благодарим Вас за заказ!</div>
+                <div className="logo-wrapper">
+                  <Logo />
+                </div>
+                <div className="menu-wrapper">
+                  <Menu/>
+                </div>
             </div>
             <SuccessOrder/>
             <Footer/>

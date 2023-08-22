@@ -13,8 +13,8 @@ function PriceFormat({title, value}) {
     };
 
     return (
-        <span className={`${title}-value currency-item`}>
-         {formatValue(value)}
+      <span className={`${title}-value currency-item`}>
+        {formatValue(value)}
       </span>
     );
 }

@@ -41,7 +41,7 @@ function Seats() {
 
     const handleClick = () => {
         navigate('/order/passengers/');
-        document.documentElement.scrollTop = 0;
+        // document.documentElement.scrollTop = 0;
     };
 
     return (

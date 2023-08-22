@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 import PropTypes from 'prop-types';
 
-import PriceFormat from '../../../PriceFormat/PriceFormat';
 import rub from '../../../../images/tickets/tickets-rub.svg';
 import express from '../../../../images/tickets/tickets-express.svg';
 import wifi from '../../../../images/tickets/tickets-wifi.svg';
@@ -82,10 +81,9 @@ function LastTicket({ticket}) {
                 <div className="last_ticket-price-range">
                <span className="last_ticket-price">
                   от{' '}
-                   <PriceFormat
-                       title="last_ticket-price"
-                       value={ticket.departure.min_price}
-                   />
+                  <span className="last_ticket-price-value currency-item">
+                    {ticket.departure.min_price.toLocaleString('ru')}
+                  </span>
                   <img className="last_ticket__currency" src={rub} alt="руб."/>
                </span>
                 </div>

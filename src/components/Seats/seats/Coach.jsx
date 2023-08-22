@@ -10,7 +10,6 @@ import LuxClass from '../classes/LuxClass';
 import KupeClass from '../classes/KupeClass';
 import PlatzcartClass from '../classes/PlatzcartClass';
 import SeatsClass from '../classes/SeatsClass';
-import PriceFormat from '../../PriceFormat/PriceFormat';
 import Service from './Service';
 import {passengersPriceChange} from "../../../slices/passengersSlice";
 
@@ -165,7 +164,9 @@ export default function Coach({coach, seatsList, typeTicket}) {
                     <h5 className="coach-info-title">Стоимость</h5>
                     {!type.lux && (
                         <p className="coach-info-text">
-                            <PriceFormat title="coach-info" value={coach.top_price}/>
+                            <span className="coach-info-value currency-item">
+                              {coach.top_price.toLocaleString('ru')}
+                            </span>
                             <img
                                 className="coach-ticket-сurrency"
                                 src={rub}
@@ -174,12 +175,16 @@ export default function Coach({coach, seatsList, typeTicket}) {
                         </p>
                     )}
                     <p className="coach-info-text">
-                        <PriceFormat title="coach-info" value={coach.bottom_price}/>
+                        <span className="coach-info-value currency-item">
+                          {coach.bottom_price.toLocaleString('ru')}
+                        </span>
                         <img className="coach-ticket-сurrency" src={rub} alt="руб."/>
                     </p>
                     {type.platzcart && (
                         <p className="coach-info-text">
-                            <PriceFormat title="coach-info" value={coach.side_price}/>
+                            <span className="coach-info-value currency-item">
+                              {coach.side_price.toLocaleString('ru')}
+                            </span>
                             <img
                                 className="coach-ticket-сurrency"
                                 src={rub}
@@ -247,10 +252,9 @@ export default function Coach({coach, seatsList, typeTicket}) {
             <div className="coach-total">
                 {child + adult + service > 0 && (
                     <p className="coach-total-text">
-                        <PriceFormat
-                            title="coach-total"
-                            value={child + adult + service}
-                        />
+                        <span className="coach-total-value currency-item">
+                          {(child + adult + service).toLocaleString('ru')}
+                        </span>
                         <img className="coach-total-сurrency" src={rub} alt="руб."/>
                     </p>
                 )}
