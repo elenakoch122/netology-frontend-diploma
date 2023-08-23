@@ -22,12 +22,6 @@ export default function Details() {
     setHidden((prev) => ({ ...prev, [name]: !prev[name] }));
   };
 
-  const formatSeconds = (value) => {
-    const hour = parseInt(value / 3600);
-    const min = parseInt((value % 3600) / 60);
-    return `${hour} : ${min}`;
-  };
-
   return (
     <section className="details">
       <h3 className="title details_title">Детали поездки</h3>
@@ -37,7 +31,7 @@ export default function Details() {
           <h4 className="title title--small sidebar_title">
             Туда
             <span className="sidebar_date">
-              {moment.unix(departure.from.datetime).format('DD.MM.YYYY')}
+              {moment.unix(departure.from.datetime).utc().format('DD.MM.YYYY')}
             </span>
           </h4>
 
@@ -71,21 +65,17 @@ export default function Details() {
             <div className="route">
               <div className="route_info">
                 <p className="route_time">
-                  {moment
-                    .unix(departure.from.datetime)
-                    .format('HH:mm')}
+                  {moment.unix(departure.from.datetime).utc().format('HH:mm')}
                 </p>
 
                 <p className="route_date">
-                  {moment
-                    .unix(departure.from.datetime)
-                    .format('DD.MM.YYYY')}
+                  {moment.unix(departure.from.datetime).utc().format('DD.MM.YYYY')}
                 </p>
               </div>
 
               <div className="route_duration">
                 <p className="route_duration-time">
-                  {formatSeconds(departure.duration)}
+                  {moment.unix(departure.duration).utc().format('HH:mm')}
                 </p>
 
                 {departureSvg}
@@ -93,13 +83,11 @@ export default function Details() {
 
               <div className="route_info route_info--right">
                 <p className="route_time">
-                  {moment.unix(departure.to.datetime).format('hh:mm')}
+                  {moment.unix(departure.to.datetime).utc().format('hh:mm')}
                 </p>
 
                 <p className="route_date">
-                  {moment
-                    .unix(departure.to.datetime)
-                    .format('DD.MM.YYYY')}
+                  {moment.unix(departure.to.datetime).utc().format('DD.MM.YYYY')}
                 </p>
               </div>
             </div>
@@ -133,9 +121,7 @@ export default function Details() {
             <h4 className="title title--small sidebar_title">
               Обратно{' '}
               <span className="sidebar_date">
-                {moment
-                  .unix(arrival.from.datetime)
-                  .format('DD.MM.YYYY')}
+                {moment.unix(arrival.from.datetime).utc().format('DD.MM.YYYY')}
               </span>
             </h4>
 
@@ -169,21 +155,17 @@ export default function Details() {
               <div className="route">
                 <div className="route_info">
                   <p className="route_time">
-                    {moment
-                      .unix(arrival.from.datetime)
-                      .format('HH:mm')}
+                    {moment.unix(arrival.to.datetime).utc().format('HH:mm')}
                   </p>
 
                   <p className="route_date">
-                    {moment
-                      .unix(arrival.from.datetime)
-                      .format('DD.MM.YYYY')}
+                    {moment.unix(arrival.to.datetime).utc().format('DD.MM.YYYY')}
                   </p>
                 </div>
 
                 <div className="route_duration">
                   <p className="route_duration-time">
-                    {formatSeconds(arrival.duration)}
+                    {moment.unix(arrival.duration).utc().format('HH:mm')}
                   </p>
 
                   {arrivalSvg}
@@ -191,13 +173,11 @@ export default function Details() {
 
                 <div className="route_info route_info--right">
                   <p className="route_time">
-                    {moment.unix(arrival.to.datetime).format('hh:mm')}
+                    {moment.unix(arrival.from.datetime).utc().format('HH:mm')}
                   </p>
 
                   <p className="route_date">
-                    {moment
-                      .unix(arrival.to.datetime)
-                      .format('DD.MM.YYYY')}
+                    {moment.unix(arrival.from.datetime).utc().format('DD.MM.YYYY')}
                   </p>
                 </div>
               </div>
