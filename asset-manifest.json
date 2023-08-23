@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/netology-frontend-diploma/static/css/main.f6f8fa05.css",
-    "main.js": "/netology-frontend-diploma/static/js/main.275d3a21.js",
+    "main.js": "/netology-frontend-diploma/static/js/main.98d69183.js",
     "static/js/787.ea3e3b5f.chunk.js": "/netology-frontend-diploma/static/js/787.ea3e3b5f.chunk.js",
     "static/media/success_background.png": "/netology-frontend-diploma/static/media/success_background.0bd11e8f28cc77016136.png",
     "static/media/how-it-works-background.png": "/netology-frontend-diploma/static/media/how-it-works-background.e557ef7e8544fbb0328f.png",
@@ -83,11 +83,11 @@
     "static/media/firstClass.svg": "/netology-frontend-diploma/static/media/firstClass.331955b821e33f471c9d75058937ca74.svg",
     "static/media/select.svg": "/netology-frontend-diploma/static/media/select.7deddb57c81afe1a98e3.svg",
     "main.f6f8fa05.css.map": "/netology-frontend-diploma/static/css/main.f6f8fa05.css.map",
-    "main.275d3a21.js.map": "/netology-frontend-diploma/static/js/main.275d3a21.js.map",
+    "main.98d69183.js.map": "/netology-frontend-diploma/static/js/main.98d69183.js.map",
     "787.ea3e3b5f.chunk.js.map": "/netology-frontend-diploma/static/js/787.ea3e3b5f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6f8fa05.css",
-    "static/js/main.275d3a21.js"
+    "static/js/main.98d69183.js"
   ]
 }
