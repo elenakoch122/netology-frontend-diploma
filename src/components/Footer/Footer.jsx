@@ -51,29 +51,27 @@ export default function Footer() {
           <section className="footer__subscribe">
             <h3 className="footer_subscribe-title footer-title">Подписка</h3>
 
-            <form className="footer_form">
-              <label className="footer__form-label" htmlFor="subscription">
-                Будьте в курсе событий
+            <label className="footer__form-label" htmlFor="subscription">
+              Будьте в курсе событий
 
-                <form>
-                  <div className="input-wrapper">
-                    <input
-                      className="footer__form-input"
-                      type="email"
-                      id="subscription"
-                      placeholder="e-mail"
-                    />
-                    <button
-                      className="footer__form-button"
-                      id="button"
-                      type="submit"
-                    >
-                      Отправить
-                    </button>
-                  </div>
-                </form>
-              </label>
-            </form>
+              <form>
+                <div className="input-wrapper">
+                  <input
+                    className="footer__form-input"
+                    type="email"
+                    id="subscription"
+                    placeholder="e-mail"
+                  />
+                  <button
+                    className="footer__form-button"
+                    id="button"
+                    type="submit"
+                  >
+                    Отправить
+                  </button>
+                </div>
+              </form>
+            </label>
 
             <h3 className="footer_subscribe-title footer-title second-title ">Подписывайтесь на нас</h3>
 

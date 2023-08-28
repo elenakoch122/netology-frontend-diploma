@@ -26,9 +26,13 @@ export default  function InputDatePicker() {
     }
   }, [dateEnd]);
 
+  const formate = (value) => value < 10 ? `0${value}` : value;
+
   const handleChange = (name, date) => {
-    const str = date.toLocaleDateString();
-    const format = `${str.slice(-4)}-${str.slice(3, 5)}-${str.slice(0, 2)}`;
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const format = `${year}-${formate(month)}-${formate(day)}`;
 
     dispatch(
       searchFieldChange({

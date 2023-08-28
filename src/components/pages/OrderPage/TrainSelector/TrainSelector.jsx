@@ -72,7 +72,7 @@ export default function TrainSelector() {
       <ul className="train-selector__cards">
         {
           trains && trains.map((el) => (
-            <li><TrainCard key={nanoid()} train={el} /></li>
+            <li key={nanoid()}><TrainCard train={el} /></li>
           ))
         }
       </ul>
