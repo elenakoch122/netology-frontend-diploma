@@ -10,8 +10,8 @@ const initialState = JSON.parse(localStorage.getItem('filter')) || {
   have_express: false,
   have_air_conditioning: false,
 
-  price_from: 10,
-  price_to: 5210,
+  price_from: 1920,
+  price_to: 7000,
 
   start_departure_hour_from: 0,
   start_departure_hour_to: 24,
